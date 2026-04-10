@@ -1,8 +1,9 @@
 import chromadb
 import dashscope
+import os
 from dashscope import TextEmbedding, Generation
 
-dashscope.api_key = "sk-d3e0c2eb1feb4b4aab36d1b770de8151"
+dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
 CHROMA_DATA_PATH = "./chroma_db"
 DOCUMENT_PATH = "knowledge.txt"
 EMBEDDING_MODEL = "text-embedding-v2"
